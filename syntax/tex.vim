@@ -34,7 +34,7 @@ nmap <D-B> :!bibtex %:r<CR>
 " Navigation
 " ------------------------------------------------------------------------------
 " shortcut for LatexTOC
-nmap <D-\> :LatexTOC<CR>
+nmap <D-Bar> :LatexTOC<CR>
 
 
 " section jumping
