@@ -19,7 +19,7 @@ vmap <buffer> <C-E>		<Plug>LatexEnvWrapSelection
 " ------------------------------------------------------------------------------
 function! Typeset()
 	w
-	!pydflatex -ps %
+	!pydflatex -psw %
 endfunction
 
 command! Typeset call Typeset()
