@@ -12,7 +12,7 @@ set iskeyword=@,48-57,192-255,_,\
 
 nmap <buffer> <C-E>		<Plug>LatexChangeEnv
 vmap <buffer> <C-W>		<Plug>LatexWrapSelection
-vmap <buffer> <C-E>		<Plug>LatexWrapSelectionEnv
+vmap <buffer> <C-E>		<Plug>LatexEnvWrapSelection
 
 " ------------------------------------------------------------------------------
 " Typesetting
