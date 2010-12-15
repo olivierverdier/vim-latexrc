@@ -50,3 +50,8 @@ function! TexJump2Section( cnt, dir )
   let @/ = pat
 endfunction
 
+" ------------------------------------------------------------------------------
+" Syntax
+" ------------------------------------------------------------------------------
+" do not consider that caret and underscore outside math environment are errors
+syn clear texOnlyMath
