@@ -6,8 +6,9 @@ set iskeyword=@,48-57,192-255,_,\
 " ------------------------------------------------------------------------------
 " Environments
 " ------------------------------------------------------------------------------
-imap <buffer> [[ 		\begin{
-imap <buffer> ]]		<Plug>LatexCloseLastEnv
+" the following are better covered by snipMate
+"imap <buffer> [[ 		\begin{
+"imap <buffer> ]]		<Plug>LatexCloseLastEnv
 
 nmap <buffer> <C-E>		<Plug>LatexChangeEnv
 vmap <buffer> <C-W>		<Plug>LatexWrapSelection
