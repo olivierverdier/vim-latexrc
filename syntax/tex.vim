@@ -39,8 +39,8 @@ nmap <D-Bar> :LatexTOC<CR>
 
 
 " section jumping
-"noremap <buffer> <silent> ]] :<c-u>call TexJump2Section( v:count1, '' )<CR>
-"noremap <buffer> <silent> [[ :<c-u>call TexJump2Section( v:count1, 'b' )<CR>
+noremap <buffer> <silent> <leader>s :<c-u>call TexJump2Section( v:count1, '' )<CR>
+" noremap <buffer> <silent> [[ :<c-u>call TexJump2Section( v:count1, 'b' )<CR>
 function! TexJump2Section( cnt, dir )
   let i = 0
   let pat = '^\\\(part\|chapter\|\(sub\)*section\|paragraph\)\>\|\%$\|\%^'
