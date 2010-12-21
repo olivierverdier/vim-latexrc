@@ -1,4 +1,5 @@
-set nosmartindent
+" Note: this configuration file is meant to work with LaTeX Box:
+" https://github.com/olivierverdier/vim-latex-box
 
 " add underscore and backslash to keyword definition
 set iskeyword=@,48-57,192-255,_,\
