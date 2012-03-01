@@ -58,3 +58,19 @@ endfunction
 " ------------------------------------------------------------------------------
 " do not consider that caret and underscore outside math environment are errors
 syn clear texOnlyMath
+
+" ------------------------------------------------------------------------------
+" Python Syntax Highlighting
+" ------------------------------------------------------------------------------
+let s:current_syntax=b:current_syntax
+unlet b:current_syntax 
+syn include @Python syntax/python.vim
+let b:current_syntax=s:current_syntax
+
+syn region texPython	matchgroup=texPythonDelimiter	start="\\begin{python}"		end="\\end{python}\|%stopzone\>"	contains=@NoSpell,@Python
+syn match texRefZone		'\\\(page\|auto\|eq\)ref\>'	skipwhite	nextgroup=texRefLabel
+syn region texCode		start="\\pyth{"		end="}\|%stopzone\>" contains=@NoSpell,@Python
+syn region texCode		start="\\pyth!"		end="!\|%stopzone\>" contains=@NoSpell,@Python
+syn region texCode		start="\\code{"		end="}\|%stopzone\>" contains=@NoSpell,@Python
+let g:tex_comment_nospell=1
+syn region texCiteOption	contained matchgroup=Delimiter start='\['	end=']'	contains=@NoSpell,@texRefGroup,@texMathZones,texRefZone	nextgroup=texCiteOption,texCite
