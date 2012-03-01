@@ -20,14 +20,16 @@ vmap <buffer> <C-E>		<Plug>LatexEnvWrapSelection
 " ------------------------------------------------------------------------------
 function! Typeset()
 	w
-	!pydflatex -psw %
+	AsyncMake
+	call setqflist([])
+	copen
 endfunction
 
 command! Typeset call Typeset()
 nmap <D-C-M> :Typeset<CR>
 
 " replace the make command
-set makeprg=pydflatex\ -ps\ %
+set makeprg=scons\ -Q
 
 nmap <D-B> :!bibtex %:r<CR>
 
