@@ -74,3 +74,9 @@ syn region texCode		start="\\pyth!"		end="!\|%stopzone\>" contains=@NoSpell,@Pyt
 syn region texCode		start="\\code{"		end="}\|%stopzone\>" contains=@NoSpell,@Python
 let g:tex_comment_nospell=1
 syn region texCiteOption	contained matchgroup=Delimiter start='\['	end=']'	contains=@NoSpell,@texRefGroup,@texMathZones,texRefZone	nextgroup=texCiteOption,texCite
+
+" ------------------------------------------------------------------------------
+" Open Pdf
+" ------------------------------------------------------------------------------
+nmap <silent><leader>o :silent !open %:r.pdf<CR>
+
