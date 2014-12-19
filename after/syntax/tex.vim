@@ -2,7 +2,7 @@
 " https://github.com/olivierverdier/vim-latex-box
 
 " add underscore and backslash to keyword definition
-set iskeyword=@,48-57,192-255,_,\
+set iskeyword=@,48-57,192-255,_,:
 
 " ------------------------------------------------------------------------------
 " Environments
