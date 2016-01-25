@@ -24,7 +24,7 @@ command! Typeset call Typeset()
 nmap <D-C-M> :Typeset<CR>
 
 " replace the make command
-set makeprg=scons\ -Q
+set makeprg=~/.local/bin/pydflatex\ -kx\ %:r
 
 nmap <D-B> :!bibtex %:r<CR>
 
